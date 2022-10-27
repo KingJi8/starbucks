@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+/* COMMON */
+body{
+  font-family: 'Nanum Gothic', sans-serif;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* HEADER */
+header {
+  min-width: 1200px;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+}
+header>.inner {
+  height: 120px;
+  position: relative;
+}
+header .logo {
+  height: 75px;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
+
+/* gnb */
+header .gnbBox {
+  display:flex;
+  float: right;
+}
+header .gnb {
+  display: flex;
+}
+header .gnb .gnbItm {
+  position:relative;
+}
+header .gnb .gnbItm::before {
+  content: "";
+  background-color: #e5e5e5;
+  width: 1px;
+  height: 12px;
+  position:absolute;
+  top:0;
+  bottom:0;
+  margin:auto 0;
+}
+header .gnb .gnbItm:first-child::before {
+  display: none;
+}
+header .gnb .gnbItm > a {
+  display: block;
+  color: #656565;
+  font-size: 12px;
+  padding: 11px 1rem;
+}
+header .gnb .gnbItm > a:hover {
+  color: #000;
+}
+
+/* search */
+header .gnbBox .search {
+  position: relative;
+  height: 34px;
+}
+header .gnbBox .search input {
+  width: 34px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #777;
+  outline: none;
+  transition: width 0.4s;
+}
+header .gnbBox .search input:focus {
+  width: 190px;
+  border-color: #669900;
+}
+header .gnbBox .search .material-icons {
+  position: absolute;
+  height: 24px;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: 0.4s;
+}
+header .gnbBox .search.active .material-icons {
+  opacity: 0;
+}
+
+/* lnb */
+header .lnb {
+  display: flex;
+  position: absolute;
+  right:0;
+  bottom: 0;
+  z-index: 1;
+}
+header .lnb .lnbItm .lnbTit {
+  padding: 10px 40px 34px;
+  font-size: 13px;
+}
+header .lnb .lnbItm:hover .lnbTit {
+  background-color: #333;
+  color: #669900;
+  border-radius: 5px 5px 0 0 ;
+}
+header .lnb .lnbItm .lnbContents {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  display:none;
+}
+header .lnb .lnbItm:hover .lnbContents {
+  display:block;
+}
+header .lnb .lnbItm .lnbContents .lnbDrop1stBox {
+  background-color: #333;
+}
+header .lnb .lnbItm .lnbContents .lnbDrop1stBox>ul {
+  display: flex;
+}
+header .lnb .lnbItm .lnbContents .lnbDrop1stBox>ul .dropBox {
+  padding: 20px 0 30px;
+  width: 240px;
+}
+header .lnb .lnbItm .lnbContents .lnbDrop1stBox>ul .dropBox h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #fff;
+}
+header .lnb .lnbItm .lnbContents .lnbDrop1stBox>ul .dropBox li {
+  font-size: 12px;
+  padding: 5px 0;
+  color: #999;
+}
+header .lnb .lnbItm .lnbContents .lnbDrop1stBox>ul .dropBox li:hover {
+  color: #669900;
+  cursor: pointer;
+}
+
+header .lnb .lnbItm .lnbContents .lnbDrop2ndBox {
+  background-image: url(./images/main_menu_pattern.jpg);
+  padding: 30px 0 10px;
+}
+header .lnb .lnbItm .lnbContents .lnbDrop2ndBox h4 {
+  color: #999;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+header .lnb .lnbItm .lnbContents .lnbDrop2ndBox p {
+  color: #669900;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
